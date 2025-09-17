@@ -1,0 +1,16 @@
+# Netlify configuration file
+
+# This section defines the build settings for your site.
+[build]
+  # Command to build the project. "yarn build" runs the build script in your package.json.
+  command = "yarn build"
+  
+  # The directory that contains the built site. For Vite projects, this is "dist".
+  publish = "dist"
+
+# This section sets up a redirect rule which is essential for Single Page Applications (SPAs).
+# It ensures that all paths are redirected to index.html, allowing React Router to handle routing.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
